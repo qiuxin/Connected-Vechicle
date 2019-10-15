@@ -8,7 +8,7 @@ Akraino Connected Vehicle Blueprint
 >   * [3.2 Install Jenkins on Master](#main-chapter-3.2)
 >   * [3.3 Clone Akraino CI Repo on Master](#main-chapter-3.3)
 >   * [3.4 Install Plugins](#main-chapter-3.4)
->   * [3.5 Enable Task](#main-chapter-3.5)
+>   * [3.5 Creat folder and Yaml file](#main-chapter-3.5)
 > * [4.Go环境安装](#main-chapter-4)
 > * [5.TAR GO安装](#main-chapter-5)
 > * [6.后端服务代码下载和编译](#main-chapter-6)
@@ -176,13 +176,24 @@ To make CI system work, the following plugins are required. So install it one by
 
 
 
-## 3.5 <a id="main-chapter-3.5"></a> Creat folder and Enable Task
+## 3.5 <a id="main-chapter-3.5"></a> Creat folder and Yaml file 
 
+create folder and yaml file for connect vehicle project
 ```
 cd ${code_download_path}/ci/ci-management/jjb
 mkdir connected-vehicle
 cd ${code_download_path}/ci/ci-management/jjb/connected-vehicle
+touch connected-vehicle.yaml
 ```
 
+
+
+
+## 3.6 <a id="main-chapter-3.6"></a> Enable Task
+
+```
+sudo jenkins‐jobs update ‐‐jobs‐only ‐‐recursive ‐‐workers 4 jjb/ "iec‐deplo
+y‐compass‐virtual‐ubuntu1604‐daily‐master"
+```
 
 ### Setup Jenkins in Slave Node
