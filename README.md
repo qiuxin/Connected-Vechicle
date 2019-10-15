@@ -115,6 +115,9 @@ Automic install process:
 Configure usrname/password:
 ![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_get_start_3.PNG)
 
+Visit Website:
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_get_start_4.PNG)
+
 
 ```
 git clone "https://gerrit.akraino.org/r/ci-management"
