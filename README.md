@@ -149,7 +149,7 @@ To make CI system work, the following plugins are required. So install it one by
 - Description Setter
 - Environment Injector
 - Git plugin
-- Post Build Script
+- Post Build Task
 - SSH Agent
 - Workspace Cleanup
 - Required for Gerrit connected systems
