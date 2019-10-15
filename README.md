@@ -136,6 +136,9 @@ cd ci-management
 git submodule update --init --recursive
 ```
 
+## 3.4 <a id="main-chapter-3.4"></a> Install Plugins
+Manage Jenkins --> Manage Plugins ,   install the plugins 
+
 
 
 
