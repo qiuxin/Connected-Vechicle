@@ -147,7 +147,7 @@ install "Config File Provider" plugin and select "install without reset":
 To make CI system work, the following plugins are required. So install it one by one according to the foregoing instructions.
 - Config File Provider
 - Description Setter
-- Environment Injector Plugin
+- Environment Injector
 - Git plugin
 - Post Build Script
 - SSH Agent
