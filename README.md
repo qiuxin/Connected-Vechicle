@@ -78,6 +78,23 @@ jenkins.service is not a native service, redirecting to /sbin/chkconfig.
 Executing /sbin/chkconfig jenkins on
 ```
 
+Adjust the Firewall
+If you are installing Jenkins on a remote CentOS server that is protected by a firewall you need to port 8080.
+
+Use the following commands to open the necessary port:
+```
+sudo firewall-cmd --permanent --zone=public --add-port=8080/tcp
+sudo firewall-cmd --reload
+```
+
+
+Setting Up Jenkins
+To set up your new Jenkins installation, open your browser and type your domain or IP address followed by port 8080:
+```
+http://your_ip_or_domain:8080
+```
+
+
 
 
 ```
