@@ -141,7 +141,7 @@ git submodule update --init --recursive
 Manage Jenkins --> Manage Plugins ,   install the plugins.
 ![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins-plugin-management.PNG)
 
-install "Config File Provider" plugin as below:
+install "Config File Provider" plugin and select "install without reset":
 ![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins-plugin-config-file-provider.PNG)
 
 To make CI system work, the following plugins are required. So install it one by one according to the foregoing instructions.
