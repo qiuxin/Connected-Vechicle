@@ -109,6 +109,9 @@ You will see the website itemized below:
 Select the left option and install the plugin later:
 ![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_get_start_1.PNG)
 
+Automic install process:
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_get_start_2.PNG)
+
 
 
 ```
