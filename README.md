@@ -6,6 +6,7 @@ Akraino Connected Vehicle Blueprint
 > * [3.Setup CI Environment](#main-chapter-3)
 >   * [3.1 Setup Jenkins Flowchart](#main-chapter-3.1)
 >   * [3.2 Install Jenkins on Master](#main-chapter-3.2)
+>   * [3.3 Clone Akraino CI Repo on Master](#main-chapter-3.3)
 > * [4.Go环境安装](#main-chapter-4)
 > * [5.TAR GO安装](#main-chapter-5)
 > * [6.后端服务代码下载和编译](#main-chapter-6)
@@ -126,6 +127,14 @@ Visit Website:
 
 Jenkis is ready:
 ![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_get_start_5.PNG)
+
+
+## 3.3 <a id="main-chapter-3.3"></a> Clone Akraino CI Repo on Master 
+
+
+
+
+
 
 ```
 git clone "https://gerrit.akraino.org/r/ci-management"
