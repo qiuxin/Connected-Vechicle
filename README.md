@@ -118,6 +118,8 @@ Configure usrname/password:
 Visit Website:
 ![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_get_start_4.PNG)
 
+Jenkis is ready:
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_get_start_5.PNG)
 
 ```
 git clone "https://gerrit.akraino.org/r/ci-management"
