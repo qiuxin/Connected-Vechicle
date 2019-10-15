@@ -137,7 +137,29 @@ git submodule update --init --recursive
 ```
 
 ## 3.4 <a id="main-chapter-3.4"></a> Install Plugins
-Manage Jenkins --> Manage Plugins ,   install the plugins 
+
+Manage Jenkins --> Manage Plugins ,   install the plugins.
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins-plugin-management.PNG)
+
+install "Config File Provider" plugin as below:
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins-plugin-config-file-provider.PNG)
+
+To make CI system work, the following plugins are required. So install it one by one according to the foregoing instructions.
+- Config File Provider
+- Description Setter
+- Environment Injector Plugin
+- Git plugin
+- Post Build Script
+- SSH Agent
+- Workspace Cleanup
+- Required for Gerrit connected systems
+- Gerrit Trigger
+- Required for GitHub connected systems
+- GitHub plugin
+- GitHub Pull Request Builder
+
+
+
 
 
 
