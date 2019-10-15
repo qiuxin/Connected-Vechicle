@@ -4,9 +4,9 @@ Akraino Connected Vehicle Blueprint
 
 ## Architecture
 Three Servers:
-Server A :    TarsFramework + Jenkis Master
-Server B :    TarsNodes + Jenkis Slave
-Server c :    TarsNodes + Jenkis Slave
+- Server A :    TarsFramework + Jenkis Master
+- Server B :    TarsNodes + Jenkis Slave
+- Server c :    TarsNodes + Jenkis Slave
 
 
 ## Hardware Requirements 
