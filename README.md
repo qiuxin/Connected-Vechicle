@@ -148,12 +148,15 @@ To make CI system work, the following plugins are required. So install it one by
 - Config File Provider
 - Description Setter
 - Environment Injector
-- Git plugin
+- Git plugin -UNDO
 - Post Build Task
 - SSH Agent
-- Workspace Cleanup
-- Required for Gerrit connected systems
+- Distributed Workspace Clean
+- Gerrit Verify Status Reporter
 - Gerrit Trigger
+- Gerrit Code Review
+- Message Injector
+
 - Required for GitHub connected systems
 - GitHub plugin
 - GitHub Pull Request Builder
