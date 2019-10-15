@@ -7,6 +7,8 @@ Akraino Connected Vehicle Blueprint
 >   * [3.1 Setup Jenkins Flowchart](#main-chapter-3.1)
 >   * [3.2 Install Jenkins on Master](#main-chapter-3.2)
 >   * [3.3 Clone Akraino CI Repo on Master](#main-chapter-3.3)
+>   * [3.4 Install Plugins](#main-chapter-3.4)
+>   * [3.5 Enable Task](#main-chapter-3.5)
 > * [4.Go环境安装](#main-chapter-4)
 > * [5.TAR GO安装](#main-chapter-5)
 > * [6.后端服务代码下载和编译](#main-chapter-6)
@@ -148,7 +150,15 @@ To make CI system work, the following plugins are required. So install it one by
 - Config File Provider
 - Description Setter
 - Environment Injector
-- Git plugin -UNDO
+- Git Parameter
+- Git ChangeLog
+- Violation Comments to Github
+- Git Automerger
+- Git Bisect
+- Git Forensics
+- git-notes
+- GitHub PR Comment Build
+- Team Concert Git
 - Post Build Task
 - SSH Agent
 - Distributed Workspace Clean
@@ -166,6 +176,7 @@ To make CI system work, the following plugins are required. So install it one by
 
 
 
+## 3.5 <a id="main-chapter-3.5"></a> Enable Task
 
 
 
