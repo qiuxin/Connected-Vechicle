@@ -156,10 +156,13 @@ To make CI system work, the following plugins are required. So install it one by
 - Gerrit Trigger
 - Gerrit Code Review
 - Message Injector
-
-- Required for GitHub connected systems
-- GitHub plugin
-- GitHub Pull Request Builder
+- GitHub Authentication
+- GitHub Issues
+- Pipeline Github Notify Step
+- Github Pull Request Coverage Status
+- Github Pull Request Builder
+- Github Integration
+- Github Status Wrapper
 
 
 
