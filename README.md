@@ -179,12 +179,21 @@ To make CI system work, the following plugins are required. So install it one by
 ## 3.5 <a id="main-chapter-3.5"></a> Creat folder and Yaml file 
 
 create folder and yaml file for connect vehicle project
+connected-vehicle.yaml is a file which discribes the whole project information and call the scripts(.sh file) to run the task.
+startTarsFramework.sh is a script to start the TarsFramework in the master node.
+stopTarsFramework.sh is a script to stop the TarsFramework in the master node.
 ```
 cd ${code_download_path}/ci/ci-management/jjb
 mkdir connected-vehicle
 cd ${code_download_path}/ci/ci-management/jjb/connected-vehicle
 touch connected-vehicle.yaml
+touch startTarsFramework.sh
+touch stopTarsFramework.sh
+chmod 777 startTarsFramework.sh 
+chmod 777 stopTarsFramework.sh
 ```
+
+In terms of startTarsFramework.sh and stopTarsFramework.sh, refer to the file in github repo.
 
 
 
