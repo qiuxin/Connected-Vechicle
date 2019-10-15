@@ -21,7 +21,7 @@ Step 2:  Setup Jenkins in Slave Node.
 ### Setup Jenkins in Master Node
 Jenkins is a Java application, so the first step is to install Java. Run the following command to install the OpenJDK 8 package:
 ```
-sudo yum install java-1.8.0-openjdk-devel
+sudo yum install -y java-1.8.0-openjdk-devel
 ```
 
 The next step is to enable the Jenkins repository. To do that, import the GPG key using the following curl command:
@@ -32,6 +32,11 @@ curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | 
 And add the repository to your system with:
 ```
 sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+```
+
+Once the repository is enabled, install the latest stable version of Jenkins by typing:
+```
+sudo yum install -y jenkins
 ```
 
 
