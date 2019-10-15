@@ -1,18 +1,26 @@
 # Connected-Vechicle
 Akraino Connected Vehicle Blueprint
+# Table of Contents
+> * [1.Architecture](#main-chapter-1)
+> * [2.项目部署架构](#main-chapter-2)
+> * [3.Setup CI Environment](#main-chapter-3)
+> * [4.Go环境安装](#main-chapter-4)
+> * [5.TAR GO安装](#main-chapter-5)
+> * [6.后端服务代码下载和编译](#main-chapter-6)
+> * [7.后端服务通过Tars部署](#main-chapter-7)
 
 
-## Architecture
+# 1. <a id="main-chapter-1"></a>Architecture
 Three Servers:
 - Server A :    TarsFramework + Jenkis Master
 - Server B :    TarsNodes + Jenkis Slave
 - Server c :    TarsNodes + Jenkis Slave
 
 
-## Hardware Requirements 
+# 2. <a id="main-chapter-2"></a>Hardware Requirements 
 Baremetal is preferred.  Some issues in Virtual Machine environment.
 
-## Setup CI Environment 
+# 3. <a id="main-chapter-3"></a> Setup CI Environment 
 
 ### Setup Jenkins Flowchart
 Step 1:  Setup Jenkins in Master Node and add the salve nodes in the Jenkis master's configuration.
@@ -96,6 +104,7 @@ http://your_ip_or_domain:8080
 
 
 
+![image](https://github.com/qiuxin/LifeService/blob/master/ReadMePicture/logicArchitecture.png)
 
 ```
 git clone "https://gerrit.akraino.org/r/ci-management"
