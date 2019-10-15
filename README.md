@@ -69,7 +69,13 @@ Oct 15 11:16:26 VM_0_4_centos systemd[1]: Started LSB: Jenkins Automation Server
 
 Finally enable the Jenkins service to start on system boot.
 ```
-
+sudo systemctl enable jenkins
+```
+output
+```
+# sudo systemctl enable jenkins
+jenkins.service is not a native service, redirecting to /sbin/chkconfig.
+Executing /sbin/chkconfig jenkins on
 ```
 
 
