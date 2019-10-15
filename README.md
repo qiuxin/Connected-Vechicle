@@ -4,7 +4,7 @@ Akraino Connected Vehicle Blueprint
 > * [1.Architecture](#main-chapter-1)
 > * [2.Hardware Requirements ](#main-chapter-2)
 > * [3.Setup CI Environment](#main-chapter-3)
-  * * [3.1 Install Jenkins on Master](#main-chapter-3.1)
+> * * [3.1 Install Jenkins on Master](#main-chapter-3.1)
 > * [4.Go环境安装](#main-chapter-4)
 > * [5.TAR GO安装](#main-chapter-5)
 > * [6.后端服务代码下载和编译](#main-chapter-6)
