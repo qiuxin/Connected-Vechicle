@@ -176,9 +176,13 @@ To make CI system work, the following plugins are required. So install it one by
 
 
 
-## 3.5 <a id="main-chapter-3.5"></a> Enable Task
+## 3.5 <a id="main-chapter-3.5"></a> Creat folder and Enable Task
 
-
+```
+cd ${code_download_path}/ci/ci-management/jjb
+mkdir connected-vehicle
+cd ${code_download_path}/ci/ci-management/jjb/connected-vehicle
+```
 
 
 ### Setup Jenkins in Slave Node
