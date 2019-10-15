@@ -39,6 +39,38 @@ Once the repository is enabled, install the latest stable version of Jenkins by 
 sudo yum install -y jenkins
 ```
 
+After the installation process is completed, start the Jenkins service with:
+```
+sudo systemctl start jenkins
+```
+
+To check whether it started successfully run:
+```
+systemctl status jenkins
+```
+
+You should see something similar to this:
+```
+# systemctl status jenkins
+* jenkins.service - LSB: Jenkins Automation Server
+   Loaded: loaded (/etc/rc.d/init.d/jenkins; bad; vendor preset: disabled)
+   Active: active (running) since Tue 2019-10-15 11:16:26 CST; 1min 15s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 489 ExecStart=/etc/rc.d/init.d/jenkins start (code=exited, status=0/SUCCESS)
+   CGroup: /system.slice/jenkins.service
+           `-510 /etc/alternatives/java -Dcom.sun.akuma.Daemon=daemonized -Djava.awt.headless=true -DJENKINS_HOME=/var/lib/jenkins -jar /usr/l...
+
+Oct 15 11:16:25 VM_0_4_centos systemd[1]: Starting LSB: Jenkins Automation Server...
+Oct 15 11:16:26 VM_0_4_centos runuser[491]: pam_unix(runuser:session): session opened for user jenkins by (uid=0)
+Oct 15 11:16:26 VM_0_4_centos runuser[491]: pam_unix(runuser:session): session closed for user jenkins
+Oct 15 11:16:26 VM_0_4_centos jenkins[489]: Starting Jenkins [  OK  ]
+Oct 15 11:16:26 VM_0_4_centos systemd[1]: Started LSB: Jenkins Automation Server.
+```
+
+Finally enable the Jenkins service to start on system boot.
+```
+
+```
 
 
 
