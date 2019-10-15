@@ -4,7 +4,8 @@ Akraino Connected Vehicle Blueprint
 > * [1.Architecture](#main-chapter-1)
 > * [2.Hardware Requirements ](#main-chapter-2)
 > * [3.Setup CI Environment](#main-chapter-3)
->   * [3.1 Install Jenkins on Master](#main-chapter-3.1)
+>   * [3.1 Setup Jenkins Flowchart](#main-chapter-3.1)
+>   * [3.2 Install Jenkins on Master](#main-chapter-3.2)
 > * [4.Go环境安装](#main-chapter-4)
 > * [5.TAR GO安装](#main-chapter-5)
 > * [6.后端服务代码下载和编译](#main-chapter-6)
@@ -23,13 +24,13 @@ Baremetal is preferred.  Some issues in Virtual Machine environment.
 
 # 3. <a id="main-chapter-3"></a> Setup CI Environment 
 
-### Setup Jenkins Flowchart
-Step 1:  Setup Jenkins in Master Node and add the salve nodes in the Jenkis master's configuration.
-Step 2:  Setup Jenkins in Slave Node.
+## 3.1 <a id="main-chapter-3.1"></a> Setup Jenkins Flowchart 
+- Step 1:  Setup Jenkins in Master Node and add the salve nodes in the Jenkis master's configuration.
+- Step 2:  Setup Jenkins in Slave Node.
 
 
 
-## 3.1 <a id="main-chapter-3.1"></a> Install Jenkins on Master 
+## 3.2 <a id="main-chapter-3.2"></a> Install Jenkins on Master 
 
 ### Setup Jenkins in Master Node
 Jenkins is a Java application, so the first step is to install Java. Run the following command to install the OpenJDK 8 package:
