@@ -2,7 +2,7 @@
 Akraino Connected Vehicle Blueprint
 # Table of Contents
 > * [1.Architecture](#main-chapter-1)
-> * [2.项目部署架构](#main-chapter-2)
+> * [2.Hardware Requirements ](#main-chapter-2)
 > * [3.Setup CI Environment](#main-chapter-3)
 > * [4.Go环境安装](#main-chapter-4)
 > * [5.TAR GO安装](#main-chapter-5)
@@ -102,9 +102,12 @@ To set up your new Jenkins installation, open your browser and type your domain 
 http://your_ip_or_domain:8080
 ```
 
+You will see the website itemized below:
+
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkis_inital_page.PNG
 
 
-![image](https://github.com/qiuxin/LifeService/blob/master/ReadMePicture/logicArchitecture.png)
+
 
 ```
 git clone "https://gerrit.akraino.org/r/ci-management"
