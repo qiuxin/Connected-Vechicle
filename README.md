@@ -103,9 +103,11 @@ http://your_ip_or_domain:8080
 ```
 
 You will see the website itemized below:
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkis_inital_page.PNG)
 
-![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkis_inital_page.PNG
 
+Select the left option and install the plugin later:
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_get_start_1.PNG)
 
 
 
