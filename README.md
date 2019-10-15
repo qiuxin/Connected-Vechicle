@@ -130,12 +130,6 @@ Jenkis is ready:
 
 
 ## 3.3 <a id="main-chapter-3.3"></a> Clone Akraino CI Repo on Master 
-
-
-
-
-
-
 ```
 git clone "https://gerrit.akraino.org/r/ci-management"
 cd ci-management
