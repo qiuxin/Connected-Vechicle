@@ -112,6 +112,8 @@ Select the left option and install the plugin later:
 Automic install process:
 ![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_get_start_2.PNG)
 
+Configure usrname/password:
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_get_start_3.PNG)
 
 
 ```
