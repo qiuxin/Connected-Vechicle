@@ -7,7 +7,7 @@ The CI logs are required to been uploaded to NEXUS repo. This article depicts th
 > * [3.Install Python3.7](#main-chapter-3)
 > * [4.Install lftools](#main-chapter-4)
 > * [5.Write upload script](#main-chapter-5)
-> * [6.Write the ](#main-chapter-6)
+> * [6.Write Account Config Script](#main-chapter-6)
 > * [7.Run the script](#main-chapter-7)
 
 # 1. <a id="main-chapter-1"></a>Software Reuqirement
@@ -112,5 +112,8 @@ password <password>
 ```
 
 
-# 6. <a id="main-chapter-6"></a> Write upload script
-
+# 6. <a id="main-chapter-6"></a> Run the script and upload log
+```
+cd /usr/local/robert/
+./push_logs.sh
+```
