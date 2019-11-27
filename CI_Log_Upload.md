@@ -9,6 +9,7 @@ The CI logs are required to been uploaded to NEXUS repo. This article depicts th
 > * [5.Write upload script](#main-chapter-5)
 > * [6.Write Account Config Script](#main-chapter-6)
 > * [7.Run the script and upload log](#main-chapter-7)
+> * [8.Appendix](#main-chapter-8)
 
 Note Well:
 You should apply a NEXUS account prior to upload the logs. Apply the NEXUS account via the following link:
@@ -122,4 +123,25 @@ password <password>
 ```
 cd /usr/local/robert/
 ./push_logs.sh
+```
+
+# 7. <a id="main-chapter-6"></a> Appendix
+
+The script for CompileTarsCode job upload.
+
+```
+[root@ip-172-31-4-217 robert]# cat push_logs.sh
+
+# Deploying logs to LF Nexus log server ##
+# BUILD_NUMBER and JOB_NAME should be set by Jenkins
+
+NEXUS_URL=https://nexus.akraino.org
+SILO=tencent
+JENKINS_HOSTNAME=54.218.53.101
+JOB_NAME=CompileTarsCode
+BUILD_NUMBER=2
+BUILD_URL="${JENKINS_HOSTNAME}/var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/log"
+NEXUS_PATH="${SILO}/job/${JOB_NAME}/${BUILD_NUMBER}/log"
+/usr/local/python3/bin/lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
+echo "Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
 ```
