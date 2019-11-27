@@ -127,7 +127,7 @@ cd /usr/local/robert/
 
 # 7. <a id="main-chapter-6"></a> Appendix
 
-The script for CompileTarsCode job upload.
+## 7.1 <a id="main-chapter-7.1"></a> The script for CompileTarsCode job upload.
 
 ```
 [root@ip-172-31-4-217 robert]# cat push_logs.sh
@@ -165,9 +165,8 @@ echo "Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
 [root@ip-172-31-4-217 robert]#
 ```
 
-
-
-The script for TestConnectVehicleService job upload. Run one time per 2 hours.
+## 7.2 <a id="main-chapter-7.2"></a> The script for TestConnectVehicleService job upload
+Run one time per 2 hours.
 ```
 [root@ip-172-31-4-217 robert]# cat push_logs.sh
 
@@ -193,7 +192,9 @@ done
 ```
 
 
-The script for TestCompileCode job upload. Run one time per 24 hours.
+## 7.3 <a id="main-chapter-7.3"></a> The script for TestCompileCode job upload 
+
+Run one time per 24 hours.
 ```
 [root@ip-172-31-4-217 robert]# cat push_logs.sh
 
