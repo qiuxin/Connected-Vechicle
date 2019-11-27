@@ -12,10 +12,11 @@ The CI logs are required to been uploaded to NEXUS repo. This article depicts th
 > * [8.Appendix](#main-chapter-8)
 
 # Note Well
-You should apply a NEXUS account prior to upload the logs. Apply the NEXUS account via the following link:
+Offical guidence:  https://wiki.akraino.org/display/AK/How+to%3A+Push+Logs+to+Nexus
+
+A NEXUS account is required to upload the logs. Apply the NEXUS account via the following link:
 https://jira.linuxfoundation.org/servicedesk/customer/portals
 
-Offical guidence:  https://wiki.akraino.org/display/AK/How+to%3A+Push+Logs+to+Nexus
 
 # 1. <a id="main-chapter-1"></a>Software Reuqirement
 The software itemized below should be installed prior to upload the log.
