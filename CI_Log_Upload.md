@@ -168,6 +168,7 @@ echo "Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
 
 
 The script for TestConnectVehicleService job upload.
+```
 [root@ip-172-31-4-217 robert]# cat push_logs.sh
 
 # Deploying logs to LF Nexus log server ##
@@ -189,3 +190,4 @@ NEXUS_PATH="${SILO}/job/${JOB_NAME}/${BUILD_NUMBER}/log"
 /usr/local/python3/bin/lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
 echo "Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
 done
+```
