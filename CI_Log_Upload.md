@@ -3,7 +3,7 @@ The CI logs are required to been uploaded to NEXUS repo. This article depicts th
 
 # Table of Contents
 > * [1.Software Reuqirement](#main-chapter-1)
-> * [2.Hardware Requirements ](#main-chapter-2)
+> * [2.Install Nginx](#main-chapter-2)
 > * [3.Setup CI Environment](#main-chapter-3)
 >   * [3.1 Setup Jenkins Flowchart](#main-chapter-3.1)
 >   * [3.2 Install Jenkins on Master](#main-chapter-3.2)
@@ -26,7 +26,15 @@ The software itemized below should be installed prior to upload the log.
 
 # 2. <a id="main-chapter-2"></a> Install Nginx 
 For X86 platform
-
+```
+sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+sudo yum install -y nginx
+sudo systemctl start nginx.service
+sudo systemctl enable nginx.service
+```
 
 
 For Arm platform
+```
+curl -
+```
