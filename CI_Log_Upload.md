@@ -55,7 +55,7 @@ ip-172-31-11-179.us-west-2.compute.internal
 ```
 or
 ```
-//Curl local IP address directly
+//Curl Local IP Address directly
 curl 34.216.198.49
 ```
 
