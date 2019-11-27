@@ -11,7 +11,7 @@ The CI logs are required to been uploaded to NEXUS repo. This article depicts th
 > * [7.Run the script and upload log](#main-chapter-7)
 > * [8.Appendix](#main-chapter-8)
 
-Note Well:
+# Note Well
 You should apply a NEXUS account prior to upload the logs. Apply the NEXUS account via the following link:
 https://jira.linuxfoundation.org/servicedesk/customer/portals
 
