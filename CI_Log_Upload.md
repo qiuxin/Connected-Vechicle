@@ -36,5 +36,13 @@ sudo systemctl enable nginx.service
 
 For Arm platform
 ```
-curl -
+yum -y install pcre-devel
+yum -y install openssl-devel
+mkdir /data
+cd /data/
+wget  http://nginx.org/download/nginx-1.16.0.tar.gz
+tar -xvzf nginx-1.16.0.tar.gz
+cd /data/nginx-1.16.0
+./configure --prefix=/usr/local/nginx --with-http_slice_module --with-http_mp4_module --with-http_ssl_module --with-http_sub_module --with-http_gzip_static_module --with-http_stub_status_module
+
 ```
