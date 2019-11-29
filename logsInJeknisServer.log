@@ -1,0 +1,463 @@
+
+
+
+[root@ip-172-31-4-217 13]# pwd
+/var/lib/jenkins/jobs/TestCompileCode/builds/13
+[root@ip-172-31-4-217 13]# ls
+build.xml  changelog.xml  log
+[root@ip-172-31-4-217 13]# cat log
+Started by timer
+Running as SYSTEM
+Building remotely on ha:////4CagVHPL9WGo5h6j3dltIARbTmogQdVki7MCAOe24a94AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQi/bJcI92QxKJiP6B7AVybetPLAAAAvm2-TarsNode (TarsNode) in workspace /usr/local/robert/workspace/TestCompileCode
+[TestCompileCode] $ /bin/sh -xe /tmp/jenkins8739295605914779363.sh
++ cd /usr/local/robert/testCompileCode
++ git clone -b arm https://github.com/qiuxin/Tars.git
+Cloning into 'Tars'...
++ cd /usr/local/robert/testCompileCode/Tars
++ git submodule update --init --recursive
+Submodule 'cpp' (https://github.com/qiuxin/TarsCpp) registered for path 'cpp'
+Submodule 'framework' (https://github.com/qiuxin/TarsFramework) registered for path 'framework'
+Submodule 'go' (https://github.com/TarsCloud/TarsGo) registered for path 'go'
+Submodule 'java' (https://github.com/TarsCloud/TarsJava) registered for path 'java'
+Submodule 'nodejs' (https://github.com/tars-node/Tars.js) registered for path 'nodejs'
+Submodule 'php' (https://github.com/TarsPHP/TarsPHP) registered for path 'php'
+Submodule 'tup' (https://github.com/TarsCloud/TarsTup) registered for path 'tup'
+Submodule 'web' (https://github.com/qiuxin/TarsWeb) registered for path 'web'
+Cloning into 'cpp'...
+Submodule path 'cpp': checked out '647cf2c41a8b4d9cda001fd1bc419dcdb7af5708'
+Submodule 'servant/protocol' (https://github.com/TarsCloud/TarsProtocol.git) registered for path 'servant/protocol'
+Submodule 'unittest' (https://github.com/TarsCloud/tars-unittest.git) registered for path 'unittest'
+Cloning into 'servant/protocol'...
+Submodule path 'cpp/servant/protocol': checked out 'fb4aecff02f143f322272d5597e428c93bdaa6fb'
+Cloning into 'unittest'...
+Submodule path 'cpp/unittest': checked out 'e663956b02aa72f9491f759263da89d62502f7e8'
+Cloning into 'framework'...
+Submodule path 'framework': checked out 'a91f4ba42b0e84832d89cb2bf363bdfc00a95b21'
+Submodule 'tarscpp' (https://github.com/qiuxin/TarsCpp.git) registered for path 'tarscpp'
+Submodule 'thirdparty/rapidjson' (https://github.com/Tencent/rapidjson.git) registered for path 'thirdparty/rapidjson'
+Cloning into 'tarscpp'...
+Submodule path 'framework/tarscpp': checked out '647cf2c41a8b4d9cda001fd1bc419dcdb7af5708'
+Submodule 'servant/protocol' (https://github.com/TarsCloud/TarsProtocol.git) registered for path 'servant/protocol'
+Submodule 'unittest' (https://github.com/TarsCloud/tars-unittest.git) registered for path 'unittest'
+Cloning into 'servant/protocol'...
+Submodule path 'framework/tarscpp/servant/protocol': checked out 'fb4aecff02f143f322272d5597e428c93bdaa6fb'
+Cloning into 'unittest'...
+Submodule path 'framework/tarscpp/unittest': checked out 'e663956b02aa72f9491f759263da89d62502f7e8'
+Cloning into 'thirdparty/rapidjson'...
+Submodule path 'framework/thirdparty/rapidjson': checked out '73063f5002612c6bf64fe24f851cd5cc0d83eef9'
+Submodule 'thirdparty/gtest' (https://github.com/google/googletest.git) registered for path 'thirdparty/gtest'
+Cloning into 'thirdparty/gtest'...
+Submodule path 'framework/thirdparty/rapidjson/thirdparty/gtest': checked out '0a439623f75c029912728d80cb7f1b8b48739ca4'
+Cloning into 'go'...
+Submodule path 'go': checked out 'a411a984c6bde1538985a8dbad6b1efe67836afc'
+Cloning into 'java'...
+Submodule path 'java': checked out '65fcd05116a0b8bee834529fd890668f35744546'
+Cloning into 'nodejs'...
+Submodule path 'nodejs': checked out 'b40c148d23366f8e24b447058d1a4e3b30f39d90'
+Submodule 'config' (https://github.com/tars-node/config.git) registered for path 'config'
+Submodule 'deploy' (https://github.com/tars-node/deploy.git) registered for path 'deploy'
+Submodule 'dyeing' (https://github.com/tars-node/dyeing.git) registered for path 'dyeing'
+Submodule 'logs' (https://github.com/tars-node/logs.git) registered for path 'logs'
+Submodule 'monitor' (https://github.com/tars-node/monitor.git) registered for path 'monitor'
+Submodule 'node-agent' (https://github.com/tars-node/node-agent.git) registered for path 'node-agent'
+Submodule 'notify' (https://github.com/tars-node/notify.git) registered for path 'notify'
+Submodule 'registry' (https://github.com/tars-node/registry.git) registered for path 'registry'
+Submodule 'rpc' (https://github.com/tars-node/rpc.git) registered for path 'rpc'
+Submodule 'stream' (https://github.com/tars-node/stream.git) registered for path 'stream'
+Submodule 'utils' (https://github.com/tars-node/utils.git) registered for path 'utils'
+Submodule 'winston-tars' (https://github.com/tars-node/winston-tars.git) registered for path 'winston-tars'
+Cloning into 'config'...
+Submodule path 'nodejs/config': checked out '36ef5fff7a17121a2438e5ec79682e493d88841a'
+Cloning into 'deploy'...
+Submodule path 'nodejs/deploy': checked out 'a918f3e83d181554fc96a7b9404ed6d9d051dc4c'
+Cloning into 'dyeing'...
+Submodule path 'nodejs/dyeing': checked out '5e1b7d1650b050d29351295d122c6549523fc5ee'
+Cloning into 'logs'...
+Submodule path 'nodejs/logs': checked out 'b3400a8de05dc23bb2362dc432f6544ada85be88'
+Cloning into 'monitor'...
+Submodule path 'nodejs/monitor': checked out 'aeaed727cd4963f5617526ffc84090b3b6558ac8'
+Cloning into 'node-agent'...
+Submodule path 'nodejs/node-agent': checked out '482c1f2f7a24bacb66cc1c86f198094818ec0f0f'
+Cloning into 'notify'...
+Submodule path 'nodejs/notify': checked out '57736f78ed3d37a4da52f73aa4a568f16c9e6267'
+Cloning into 'registry'...
+Submodule path 'nodejs/registry': checked out '2802389f27714a7eb35991fd3371e3d98fc7691a'
+Cloning into 'rpc'...
+Submodule path 'nodejs/rpc': checked out 'e1ea70acc87d6b93238675476141b7580fc66078'
+Cloning into 'stream'...
+Submodule path 'nodejs/stream': checked out '2393d8803697a389fccceb68118a295afd752515'
+Cloning into 'utils'...
+Submodule path 'nodejs/utils': checked out 'df2e2beda935f15a8d1da4c415cfbb9bc837b71d'
+Cloning into 'winston-tars'...
+Submodule path 'nodejs/winston-tars': checked out '1d995a541a4ba66e7e46e83423d0eb57fecbdd56'
+Cloning into 'php'...
+Submodule path 'php': checked out '6bff5a6913025e3b266bc7addb4999b4497dd8c3'
+Submodule 'tars-client' (https://github.com/TarsPHP/tars-client.git) registered for path 'tars-client'
+Submodule 'tars-config' (https://github.com/TarsPHP/tars-config.git) registered for path 'tars-config'
+Submodule 'tars-deploy' (https://github.com/TarsPHP/tars-deploy.git) registered for path 'tars-deploy'
+Submodule 'tars-extension' (https://github.com/TarsPHP/tars-extension.git) registered for path 'tars-extension'
+Submodule 'tars-log' (https://github.com/TarsPHP/tars-log.git) registered for path 'tars-log'
+Submodule 'tars-monitor' (https://github.com/TarsPHP/tars-monitor.git) registered for path 'tars-monitor'
+Submodule 'tars-registry' (https://github.com/TarsPHP/tars-registry.git) registered for path 'tars-registry'
+Submodule 'tars-report' (https://github.com/TarsPHP/tars-report.git) registered for path 'tars-report'
+Submodule 'tars-server' (https://github.com/TarsPHP/tars-server.git) registered for path 'tars-server'
+Submodule 'tars-utils' (https://github.com/TarsPHP/tars-utils.git) registered for path 'tars-utils'
+Submodule 'tars2php' (https://github.com/TarsPHP/tars2php.git) registered for path 'tars2php'
+Cloning into 'tars-client'...
+Submodule path 'php/tars-client': checked out 'e53aa613b52efba60149142e818b294e8e2de871'
+Cloning into 'tars-config'...
+Submodule path 'php/tars-config': checked out 'bc2ddc4efd3a3fb3728850078fb7dbff5c1353f2'
+Cloning into 'tars-deploy'...
+Submodule path 'php/tars-deploy': checked out '90757c476426860cd6634f4f6bd46d43fa69f60f'
+Cloning into 'tars-extension'...
+Submodule path 'php/tars-extension': checked out 'a58eca33a31f0d418401b71393a25b4e85d315bc'
+Cloning into 'tars-log'...
+Submodule path 'php/tars-log': checked out 'fb985094121030c68dab979b5b6f73ae3fcc4870'
+Cloning into 'tars-monitor'...
+Submodule path 'php/tars-monitor': checked out '1292fb55da3085ea584e5be8902ad9637884a06b'
+Cloning into 'tars-registry'...
+Submodule path 'php/tars-registry': checked out '9c389c4a639e6a53ddd6719dd63d2eaacd010866'
+Cloning into 'tars-report'...
+Submodule path 'php/tars-report': checked out '3230d09adcf1a2b7a266b493488b05b140634cc0'
+Cloning into 'tars-server'...
+Submodule path 'php/tars-server': checked out '80e3bde294655e5c6b13334254ae9469ba2922f2'
+Cloning into 'tars-utils'...
+Submodule path 'php/tars-utils': checked out 'decd45f1b1300d21a87d45b6004feca9e4a451e4'
+Cloning into 'tars2php'...
+Submodule path 'php/tars2php': checked out 'a996fdc183bd1d6c6921d87af153aa54a6294b97'
+Cloning into 'tup'...
+Submodule path 'tup': checked out '831fa0ec71c60eb55f3f452544faaaaae39c6c9d'
+Cloning into 'web'...
+Submodule path 'web': checked out '25d5238fd25227f2c8bb29e25163d17a7e8998d6'
++ cd /usr/local/robert/testCompileCode/Tars/framework/build
++ chmod u+x build.sh
++ ./build.sh all
+-- The C compiler identification is GNU 4.8.5
+-- The CXX compiler identification is GNU 4.8.5
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Looking for include file pthread.h
+-- Looking for include file pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+-- Could NOT find PROTOBUF (missing:  PROTOBUF_LIBRARY PROTOBUF_INCLUDE_DIR)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /usr/local/robert/testCompileCode/Tars/framework/build
+Scanning dependencies of target tarsutil
+[  1%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_base64.cpp.o
+[  1%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_bitmap.cpp.o
+[  1%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_buffer.cpp.o
+[  2%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_buffer_pool.cpp.o
+[  2%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_cgi.cpp.o
+[  3%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_clientsocket.cpp.o
+[  3%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_common.cpp.o
+[  4%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_config.cpp.o
+[  4%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_dyn_object.cpp.o
+[  5%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_encoder.cpp.o
+[  5%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_epoll_server.cpp.o
+[  5%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_epoller.cpp.o
+[  6%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_ex.cpp.o
+[  6%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_fifo.cpp.o
+[  7%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_file.cpp.o
+[  7%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_file_mutex.cpp.o
+[  8%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_gzip.cpp.o
+[  8%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_hashmap.cpp.o
+[  8%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_hashmap_compact.cpp.o
+[  9%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_http.cpp.o
+[  9%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_http2clientmgr.cpp.o
+[ 10%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_http2session.cpp.o
+[ 10%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_http_async.cpp.o
+[ 11%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_logger.cpp.o
+[ 11%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_malloc_chunk.cpp.o
+[ 12%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_md5.cpp.o
+[ 12%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_mem_chunk.cpp.o
+[ 12%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_mem_queue.cpp.o
+[ 13%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_mmap.cpp.o
+[ 13%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_multi_hashmap.cpp.o
+[ 14%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_mysql.cpp.o
+[ 14%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_nghttp2.cpp.o
+[ 15%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_openssl.cpp.o
+[ 15%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_option.cpp.o
+[ 15%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_pack.cpp.o
+[ 16%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_parsepara.cpp.o
+[ 16%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_rbtree.cpp.o
+[ 17%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_sem_mutex.cpp.o
+[ 17%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_sha.cpp.o
+[ 18%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_shm.cpp.o
+[ 18%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_socket.cpp.o
+[ 19%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_sslmgr.cpp.o
+[ 19%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_tea.cpp.o
+[ 19%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_thread.cpp.o
+[ 20%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_thread_cond.cpp.o
+[ 20%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_thread_mutex.cpp.o
+[ 21%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_thread_pool.cpp.o
+[ 21%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_thread_rwlock.cpp.o
+[ 22%] Building CXX object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_timeprovider.cpp.o
+[ 22%] Building ASM object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_jump_aarch64_sysv_elf_gas.s.o
+[ 23%] Building ASM object tarscpp/util/src/CMakeFiles/tarsutil.dir/tc_make_aarch64_sysv_elf_gas.s.o
+Linking CXX static library ../lib/libtarsutil.a
+[ 23%] Built target tarsutil
+Scanning dependencies of target COPY-LEX-YACC
+[ 23%] flex /usr/local/robert/testCompileCode/Tars/framework/tarscpp/tools/tarsgrammar/tars.l
+[ 23%] cp -rf tars.lex.cpp /usr/local/robert/testCompileCode/Tars/framework/tarscpp/tools/tarsparse
+[ 24%] bison  /usr/local/robert/testCompileCode/Tars/framework/tarscpp/tools/tarsgrammar/tars.y  -o tars.tab.cpp
+[ 24%] cp -rf tars.tab.hpp tars.tab.cpp /usr/local/robert/testCompileCode/Tars/framework/tarscpp/tools/tarsparse
+[ 24%] Built target COPY-LEX-YACC
+Scanning dependencies of target tarsparse
+[ 25%] Building CXX object tarscpp/tools/tarsparse/CMakeFiles/tarsparse.dir/element.cpp.o
+[ 25%] Building CXX object tarscpp/tools/tarsparse/CMakeFiles/tarsparse.dir/parse.cpp.o
+[ 25%] Building CXX object tarscpp/tools/tarsparse/CMakeFiles/tarsparse.dir/tars.lex.cpp.o
+[ 26%] Building CXX object tarscpp/tools/tarsparse/CMakeFiles/tarsparse.dir/tars.tab.cpp.o
+Linking CXX static library ../lib/libtarsparse.a
+[ 27%] Built target tarsparse
+Scanning dependencies of target tars2cpp
+[ 28%] Building CXX object tarscpp/tools/tars2cpp/CMakeFiles/tars2cpp.dir/main.cpp.o
+[ 28%] Building CXX object tarscpp/tools/tars2cpp/CMakeFiles/tars2cpp.dir/tars2cpp.cpp.o
+Linking CXX executable tars2cpp
+[ 28%] Built target tars2cpp
+Scanning dependencies of target tars2python
+[ 29%] Building CXX object tarscpp/tools/tars2python/CMakeFiles/tars2python.dir/main.cpp.o
+[ 29%] Building CXX object tarscpp/tools/tars2python/CMakeFiles/tars2python.dir/tars2python.cpp.o
+Linking CXX executable tars2python
+[ 29%] Built target tars2python
+Scanning dependencies of target tars2cs
+[ 30%] Building CXX object tarscpp/tools/tars2cs/CMakeFiles/tars2cs.dir/main.cpp.o
+[ 30%] Building CXX object tarscpp/tools/tars2cs/CMakeFiles/tars2cs.dir/tars2cs.cpp.o
+Linking CXX executable tars2cs
+[ 30%] Built target tars2cs
+Scanning dependencies of target tars2c
+[ 31%] Building CXX object tarscpp/tools/tars2c/CMakeFiles/tars2c.dir/main.cpp.o
+[ 31%] Building CXX object tarscpp/tools/tars2c/CMakeFiles/tars2c.dir/tars2c.cpp.o
+Linking CXX executable tars2c
+[ 31%] Built target tars2c
+Scanning dependencies of target tars2oc
+[ 32%] Building CXX object tarscpp/tools/tars2oc/CMakeFiles/tars2oc.dir/main.cpp.o
+[ 32%] Building CXX object tarscpp/tools/tars2oc/CMakeFiles/tars2oc.dir/tars2oc.cpp.o
+Linking CXX executable tars2oc
+[ 32%] Built target tars2oc
+Scanning dependencies of target tars2php
+[ 33%] Building CXX object tarscpp/tools/tars2php/CMakeFiles/tars2php.dir/main.cpp.o
+[ 33%] Building CXX object tarscpp/tools/tars2php/CMakeFiles/tars2php.dir/tars2php.cpp.o
+Linking CXX executable tars2php
+[ 33%] Built target tars2php
+Scanning dependencies of target tars2android
+[ 33%] Building CXX object tarscpp/tools/tars2android/CMakeFiles/tars2android.dir/interface_analysis.cpp.o
+[ 34%] Building CXX object tarscpp/tools/tars2android/CMakeFiles/tars2android.dir/main.cpp.o
+[ 34%] Building CXX object tarscpp/tools/tars2android/CMakeFiles/tars2android.dir/tars2android.cpp.o
+[ 34%] Building CXX object tarscpp/tools/tars2android/CMakeFiles/tars2android.dir/tars_filter.cpp.o
+Linking CXX executable tars2android
+[ 34%] Built target tars2android
+Scanning dependencies of target tars2node
+[ 35%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/code_generator.cpp.o
+[ 35%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/file_util.cpp.o
+[ 35%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/gen_js.cpp.o
+[ 36%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/gen_js_dts.cpp.o
+[ 36%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/gen_proxy.cpp.o
+[ 37%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/gen_proxy_dts.cpp.o
+[ 37%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/gen_server.cpp.o
+[ 38%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/gen_server_dts.cpp.o
+[ 38%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/gen_server_imp.cpp.o
+[ 39%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/idl_scan.cpp.o
+[ 39%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/idl_util.cpp.o
+[ 39%] Building CXX object tarscpp/tools/tars2node/CMakeFiles/tars2node.dir/main.cpp.o
+Linking CXX executable tars2node
+[ 39%] Built target tars2node
+Scanning dependencies of target TUP-TARS
+[ 39%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars  /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/tup/RequestF.tars
+[ 39%] Built target TUP-TARS
+Scanning dependencies of target COPY-SERVENT-TARS
+[ 40%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --header=servant /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant/AdminF.tars
+[ 40%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --header=servant /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant/Auth.tars
+[ 41%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --header=servant /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant/BaseF.tars
+[ 41%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --header=servant /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant/ConfigF.tars
+[ 41%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --header=servant /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant/EndpointF.tars
+[ 42%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --header=servant /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant/LogF.tars
+[ 42%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --header=servant /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant/NodeF.tars
+[ 43%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --header=servant /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant/NotifyF.tars
+[ 43%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --header=servant /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant/PropertyF.tars
+[ 44%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --header=servant /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant/QueryF.tars
+[ 44%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --header=servant /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant/StatF.tars
+[ 45%] cp -rf AdminF.h /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/servant
+[ 45%] cp -rf Auth.h /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/servant
+[ 45%] cp -rf BaseF.h /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/servant
+[ 46%] cp -rf ConfigF.h /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/servant
+[ 46%] cp -rf EndpointF.h /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/servant
+[ 47%] cp -rf LogF.h /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/servant
+[ 47%] cp -rf NodeF.h /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/servant
+[ 48%] cp -rf NotifyF.h /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/servant
+[ 48%] cp -rf PropertyF.h /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/servant
+[ 48%] cp -rf QueryF.h /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/servant
+[ 49%] cp -rf StatF.h /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/servant
+[ 49%] Built target COPY-SERVENT-TARS
+Scanning dependencies of target tarsservant
+[ 50%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/AdapterProxy.cpp.o
+[ 50%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/AdminServant.cpp.o
+[ 51%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/AppCache.cpp.o
+[ 51%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/AppProtocol.cpp.o
+[ 52%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/Application.cpp.o
+[ 52%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/AsyncProcThread.cpp.o
+[ 52%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/BaseNotify.cpp.o
+[ 53%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/Communicator.cpp.o
+[ 53%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/CommunicatorEpoll.cpp.o
+[ 54%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/CoroutineScheduler.cpp.o
+[ 54%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/EndpointInfo.cpp.o
+[ 55%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/EndpointManager.cpp.o
+[ 55%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/Global.cpp.o
+[ 55%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/NetworkUtil.cpp.o
+[ 56%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/NotifyObserver.cpp.o
+[ 56%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/ObjectProxy.cpp.o
+[ 57%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/ObjectProxyFactory.cpp.o
+[ 57%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/PropertyReport.cpp.o
+[ 58%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/Servant.cpp.o
+[ 58%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/ServantHandle.cpp.o
+[ 59%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/ServantHelper.cpp.o
+[ 59%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/ServantProxy.cpp.o
+[ 59%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/ServantProxyFactory.cpp.o
+[ 60%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/StatReport.cpp.o
+[ 60%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/TarsConfig.cpp.o
+[ 61%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/TarsCurrent.cpp.o
+[ 61%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/TarsLogger.cpp.o
+[ 62%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/TarsNodeF.cpp.o
+[ 62%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/TarsNotify.cpp.o
+[ 63%] Building CXX object tarscpp/servant/libservant/CMakeFiles/tarsservant.dir/Transceiver.cpp.o
+Linking CXX static library ../lib/libtarsservant.a
+[ 63%] Built target tarsservant
+Scanning dependencies of target FRAMEWORK-PROTOCOL
+[ 63%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --include="/usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant" /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/framework/AdminReg.tars
+[ 64%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --include="/usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant" /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/framework/Node.tars
+[ 64%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --include="/usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant" /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/framework/NodeDescriptor.tars
+[ 65%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --include="/usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant" /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/framework/Patch.tars
+[ 65%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --include="/usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant" /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/framework/Registry.tars
+[ 66%] /usr/local/robert/testCompileCode/Tars/framework/build/tarscpp/tools/tars2cpp/tars2cpp --with-tars --include="/usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/servant" /usr/local/robert/testCompileCode/Tars/framework/tarscpp/servant/protocol/framework/RegistryDescriptor.tars
+[ 66%] Built target FRAMEWORK-PROTOCOL
+Scanning dependencies of target tarsconfig
+[ 66%] Building CXX object ConfigServer/CMakeFiles/tarsconfig.dir/ConfigImp.cpp.o
+[ 67%] Building CXX object ConfigServer/CMakeFiles/tarsconfig.dir/ConfigServer.cpp.o
+[ 67%] Building CXX object ConfigServer/CMakeFiles/tarsconfig.dir/main.cpp.o
+Linking CXX executable ../deploy/tarsconfig/bin/tarsconfig
+[ 67%] Built target tarsconfig
+Scanning dependencies of target patch
+[ 68%] Building CXX object patchclient/CMakeFiles/patch.dir/tars_patch.cpp.o
+Linking CXX static library libpatch.a
+[ 68%] Built target patch
+Scanning dependencies of target tarsnode
+[ 68%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/Activator.cpp.o
+[ 69%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/BatchPatchThread.cpp.o
+[ 69%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/KeepAliveThread.cpp.o
+[ 70%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/NodeImp.cpp.o
+[ 70%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/NodeRollLogger.cpp.o
+[ 71%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/NodeServer.cpp.o
+[ 71%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/PlatformInfo.cpp.o
+[ 72%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/RemoveLogThread.cpp.o
+[ 72%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/ReportMemThread.cpp.o
+[ 72%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/ServerFactory.cpp.o
+[ 73%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/ServerImp.cpp.o
+[ 73%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/ServerLimitResource.cpp.o
+[ 74%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/ServerObject.cpp.o
+[ 74%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/SingleFileDownloader.cpp.o
+[ 75%] Building CXX object NodeServer/CMakeFiles/tarsnode.dir/main.cpp.o
+Linking CXX executable ../deploy/tarsnode/bin/tarsnode
+[ 75%] Built target tarsnode
+Scanning dependencies of target tarsnotify
+[ 75%] Building CXX object NotifyServer/CMakeFiles/tarsnotify.dir/LoadDbThread.cpp.o
+[ 75%] Building CXX object NotifyServer/CMakeFiles/tarsnotify.dir/NotifyImp.cpp.o
+[ 76%] Building CXX object NotifyServer/CMakeFiles/tarsnotify.dir/NotifyServer.cpp.o
+[ 76%] Building CXX object NotifyServer/CMakeFiles/tarsnotify.dir/main.cpp.o
+Linking CXX executable ../deploy/tarsnotify/tarsnotify
+[ 76%] Built target tarsnotify
+Scanning dependencies of target tarspatch
+[ 76%] Building CXX object PatchServer/CMakeFiles/tarspatch.dir/PatchCache.cpp.o
+[ 77%] Building CXX object PatchServer/CMakeFiles/tarspatch.dir/PatchImp.cpp.o
+[ 77%] Building CXX object PatchServer/CMakeFiles/tarspatch.dir/PatchServer.cpp.o
+[ 78%] Building CXX object PatchServer/CMakeFiles/tarspatch.dir/main.cpp.o
+Linking CXX executable ../deploy/tarspatch/bin/tarspatch
+[ 78%] Built target tarspatch
+Scanning dependencies of target tarsAdminRegistry
+[ 78%] Building CXX object AdminRegistryServer/CMakeFiles/tarsAdminRegistry.dir/AdminReapThread.cpp.o
+[ 79%] Building CXX object AdminRegistryServer/CMakeFiles/tarsAdminRegistry.dir/AdminRegistryImp.cpp.o
+[ 79%] Building CXX object AdminRegistryServer/CMakeFiles/tarsAdminRegistry.dir/AdminRegistryServer.cpp.o
+[ 80%] Building CXX object AdminRegistryServer/CMakeFiles/tarsAdminRegistry.dir/DbProxy.cpp.o
+[ 80%] Building CXX object AdminRegistryServer/CMakeFiles/tarsAdminRegistry.dir/ExecuteTask.cpp.o
+Linking CXX executable ../deploy/tarsAdminRegistry/bin/tarsAdminRegistry
+[ 80%] Built target tarsAdminRegistry
+Scanning dependencies of target tarsregistry
+[ 81%] Building CXX object RegistryServer/CMakeFiles/tarsregistry.dir/CheckNodeThread.cpp.o
+[ 81%] Building CXX object RegistryServer/CMakeFiles/tarsregistry.dir/CheckSettingState.cpp.o
+[ 82%] Building CXX object RegistryServer/CMakeFiles/tarsregistry.dir/DbHandle.cpp.o
+[ 82%] Building CXX object RegistryServer/CMakeFiles/tarsregistry.dir/QueryImp.cpp.o
+[ 83%] Building CXX object RegistryServer/CMakeFiles/tarsregistry.dir/ReapThread.cpp.o
+[ 83%] Building CXX object RegistryServer/CMakeFiles/tarsregistry.dir/RegistryImp.cpp.o
+[ 83%] Building CXX object RegistryServer/CMakeFiles/tarsregistry.dir/RegistryProcThread.cpp.o
+[ 84%] Building CXX object RegistryServer/CMakeFiles/tarsregistry.dir/RegistryServer.cpp.o
+[ 84%] Building CXX object RegistryServer/CMakeFiles/tarsregistry.dir/main.cpp.o
+Linking CXX executable ../deploy/tarsregistry/bin/tarsregistry
+[ 84%] Built target tarsregistry
+Scanning dependencies of target tarsproperty
+[ 84%] Building CXX object PropertyServer/CMakeFiles/tarsproperty.dir/PropertyDbManager.cpp.o
+[ 85%] Building CXX object PropertyServer/CMakeFiles/tarsproperty.dir/PropertyImp.cpp.o
+[ 85%] Building CXX object PropertyServer/CMakeFiles/tarsproperty.dir/PropertyReapThread.cpp.o
+[ 85%] Building CXX object PropertyServer/CMakeFiles/tarsproperty.dir/PropertyServer.cpp.o
+[ 86%] Building CXX object PropertyServer/CMakeFiles/tarsproperty.dir/main.cpp.o
+Linking CXX executable ../deploy/tarsproperty/tarsproperty
+[ 86%] Built target tarsproperty
+Scanning dependencies of target tarslog
+[ 87%] Building CXX object LogServer/CMakeFiles/tarslog.dir/LogImp.cpp.o
+[ 87%] Building CXX object LogServer/CMakeFiles/tarslog.dir/LogServer.cpp.o
+[ 88%] Building CXX object LogServer/CMakeFiles/tarslog.dir/main.cpp.o
+Linking CXX executable ../deploy/tarslog/tarslog
+[ 88%] Built target tarslog
+Scanning dependencies of target patchclient
+[ 88%] Building CXX object patchclient/CMakeFiles/patchclient.dir/patchclient.cpp.o
+[ 89%] Building CXX object patchclient/CMakeFiles/patchclient.dir/tars_patch.cpp.o
+Linking CXX executable patchclient
+[ 89%] Built target patchclient
+Scanning dependencies of target tarsstat
+[ 89%] Building CXX object StatServer/CMakeFiles/tarsstat.dir/ReapSSDThread.cpp.o
+[ 89%] Building CXX object StatServer/CMakeFiles/tarsstat.dir/StatDbManager.cpp.o
+[ 90%] Building CXX object StatServer/CMakeFiles/tarsstat.dir/StatImp.cpp.o
+[ 90%] Building CXX object StatServer/CMakeFiles/tarsstat.dir/StatServer.cpp.o
+[ 91%] Building CXX object StatServer/CMakeFiles/tarsstat.dir/main.cpp.o
+Linking CXX executable ../deploy/tarsstat/tarsstat
+[ 91%] Built target tarsstat
+Scanning dependencies of target tarsquerystat
+[ 92%] Building CXX object QueryStatServer/CMakeFiles/tarsquerystat.dir/DbProxy.cpp.o
+[ 92%] Building CXX object QueryStatServer/CMakeFiles/tarsquerystat.dir/DbThread.cpp.o
+[ 93%] Building CXX object QueryStatServer/CMakeFiles/tarsquerystat.dir/QueryDbThread.cpp.o
+[ 93%] Building CXX object QueryStatServer/CMakeFiles/tarsquerystat.dir/QueryImp.cpp.o
+[ 94%] Building CXX object QueryStatServer/CMakeFiles/tarsquerystat.dir/QueryServer.cpp.o
+[ 94%] Building CXX object QueryStatServer/CMakeFiles/tarsquerystat.dir/RequestDecoder.cpp.o
+Linking CXX executable ../deploy/tarsquerystat/tarsquerystat
+[ 94%] Built target tarsquerystat
+Scanning dependencies of target tarsqueryproperty
+[ 95%] Building CXX object QueryPropertyServer/CMakeFiles/tarsqueryproperty.dir/DbProxy.cpp.o
+[ 95%] Building CXX object QueryPropertyServer/CMakeFiles/tarsqueryproperty.dir/DbThread.cpp.o
+[ 96%] Building CXX object QueryPropertyServer/CMakeFiles/tarsqueryproperty.dir/QueryDbThread.cpp.o
+[ 96%] Building CXX object QueryPropertyServer/CMakeFiles/tarsqueryproperty.dir/QueryImp.cpp.o
+[ 96%] Building CXX object QueryPropertyServer/CMakeFiles/tarsqueryproperty.dir/QueryServer.cpp.o
+[ 97%] Building CXX object QueryPropertyServer/CMakeFiles/tarsqueryproperty.dir/RequestDecoder.cpp.o
+Linking CXX executable ../deploy/tarsqueryproperty/tarsqueryproperty
+[ 97%] Built target tarsqueryproperty
+Scanning dependencies of target tarsauth
+[ 98%] Building CXX object AuthServer/CMakeFiles/tarsauth.dir/AuthImp.cpp.o
+[ 98%] Building CXX object AuthServer/CMakeFiles/tarsauth.dir/AuthServer.cpp.o
+[100%] Building CXX object AuthServer/CMakeFiles/tarsauth.dir/main.cpp.o
+Linking CXX executable ../deploy/tarsauth/tarsauth
+[100%] Built target tarsauth
++ rm -rf /usr/local/robert/testCompileCode/Tars
+Finished: SUCCESS
+[root@ip-172-31-4-217 13]#
+
