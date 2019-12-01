@@ -107,13 +107,17 @@ Run the script.
 # 7. <a id="main-chapter-6"></a> Appendix
 
 ## 7.1 <a id="main-chapter-7.1"></a> The script for CompileTarsCode job upload.
+Upload one job log, refer to:
 https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_Single_push_logs.sh
 
+Upload multiple job logs, refer to:
 https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_loop_push_logs.sh
 
 
 ## 7.2 <a id="main-chapter-7.3"></a> The script for TestConnectVehicleService job upload 
+Upload one job log, refer to:
 https://github.com/qiuxin/Connected-Vechicle/blob/master/TestConnectVehicleService_Single_push_logs.sh
 
+Upload multiple job logs, refer to:
 https://github.com/qiuxin/Connected-Vechicle/blob/master/TestConnectVehicleService_loop_push_logs.sh
 
