@@ -99,18 +99,18 @@ password <password>
 
 
 # 6. <a id="main-chapter-6"></a> Run the script and upload log
-```
-cd /usr/local/robert/
-./push_logs.sh
-```
+Run the script.
 
 # 7. <a id="main-chapter-6"></a> Appendix
 
 ## 7.1 <a id="main-chapter-7.1"></a> The script for CompileTarsCode job upload.
-
-
-
-## 7.2 <a id="main-chapter-7.3"></a> The script for TestCompileCode job upload 
 https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_Single_push_logs.sh
+
 https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_loop_push_logs.sh
+
+
+## 7.2 <a id="main-chapter-7.3"></a> The script for TestConnectVehicleService job upload 
+https://github.com/qiuxin/Connected-Vechicle/blob/master/TestConnectVehicleService_Single_push_logs.sh
+
+https://github.com/qiuxin/Connected-Vechicle/blob/master/TestConnectVehicleService_loop_push_logs.sh
 
