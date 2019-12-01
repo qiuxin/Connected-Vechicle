@@ -80,30 +80,8 @@ https://www.cnblogs.com/songxingzhu/p/8568432.html
 
 
 # 5. <a id="main-chapter-5"></a> Write upload script
-```
-cd /usr/local/robert/
-touch push_logs.sh
-vim push_logs.sh
-```
-The context of push_logs are shown below:
-```
-[root@ip-172-31-11-179 robert]# cat push_logs.sh
-# Deploying logs to LF Nexus log server ##
-# BUILD_NUMBER and JOB_NAME should be set by Jenkins
-
-NEXUS_URL=https://nexus.akraino.org
-SILO=tencent
-JENKINS_HOSTNAME=34.216.198.49
-JOB_NAME=CompileMysql-TarsNode
-BUILD_NUMBER=0
-
-BUILD_URL="${JENKINS_HOSTNAME}/job/${JOB_NAME}/${BUILD_NUMBER}/"
-NEXUS_PATH="${SILO}/job/${JOB_NAME}/${BUILD_NUMBER}"
-
-#lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
-/usr/local/python3/bin/lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
-echo "Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
-```
+Find an abritbity path and create a file, the name and content of the file refer to the following link:
+https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_Single_push_logs.sh
 
 # 6. <a id="main-chapter-6"></a> Write Account Config Script
 ```
@@ -130,92 +108,9 @@ cd /usr/local/robert/
 
 ## 7.1 <a id="main-chapter-7.1"></a> The script for CompileTarsCode job upload.
 
-```
-[root@ip-172-31-4-217 robert]# cat push_logs.sh
-
-# Deploying logs to LF Nexus log server ##
-# BUILD_NUMBER and JOB_NAME should be set by Jenkins
-
-NEXUS_URL=https://nexus.akraino.org
-SILO=tencent
-JENKINS_HOSTNAME=54.218.53.101
-JOB_NAME=CompileTarsCode
-BUILD_NUMBER=2
-BUILD_URL="${JENKINS_HOSTNAME}/var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/log"
-NEXUS_PATH="${SILO}/job/${JOB_NAME}/${BUILD_NUMBER}/log"
-/usr/local/python3/bin/lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
-echo "Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
-```
-
-The script for CompileMysql-TarsNode job upload.
-```
-[root@ip-172-31-4-217 robert]# cat push_logs.sh
-
-# Deploying logs to LF Nexus log server ##
-# BUILD_NUMBER and JOB_NAME should be set by Jenkins
-
-NEXUS_URL=https://nexus.akraino.org
-SILO=tencent
-JENKINS_HOSTNAME=54.218.53.101
-JOB_NAME=CompileMysql-TarsNode
-BUILD_NUMBER=1
-BUILD_URL="${JENKINS_HOSTNAME}/var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/log"
-NEXUS_PATH="${SILO}/job/${JOB_NAME}/${BUILD_NUMBER}/log"
-/usr/local/python3/bin/lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
-echo "Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
-[root@ip-172-31-4-217 robert]#
-```
-
-## 7.2 <a id="main-chapter-7.2"></a> The script for TestConnectVehicleService job upload
-Run one time per 2 hours.
-```
-[root@ip-172-31-4-217 robert]# cat push_logs.sh
-
-# Deploying logs to LF Nexus log server ##
-# BUILD_NUMBER and JOB_NAME should be set by Jenkins
-
-NEXUS_URL=https://nexus.akraino.org
-SILO=tencent
-JENKINS_HOSTNAME=54.218.53.101
-JOB_NAME=TestConnectVehicleService
-#BUILD_NUMBER=3
-#BUILD_URL="${JENKINS_HOSTNAME}/var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/log"
-#NEXUS_PATH="${SILO}/job/${JOB_NAME}/${BUILD_NUMBER}/log"
-#/usr/local/python3/bin/lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
-#echo "Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
-for BUILD_NUMBER in {4..200}
-do
-BUILD_URL="${JENKINS_HOSTNAME}/var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/log"
-NEXUS_PATH="${SILO}/job/${JOB_NAME}/${BUILD_NUMBER}/log"
-/usr/local/python3/bin/lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
-echo "Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
-done
-```
 
 
-## 7.3 <a id="main-chapter-7.3"></a> The script for TestCompileCode job upload 
+## 7.2 <a id="main-chapter-7.3"></a> The script for TestCompileCode job upload 
+https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_Single_push_logs.sh
+https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_loop_push_logs.sh
 
-Run one time per 24 hours.
-```
-[root@ip-172-31-4-217 robert]# cat push_logs.sh
-
-# Deploying logs to LF Nexus log server ##
-# BUILD_NUMBER and JOB_NAME should be set by Jenkins
-
-NEXUS_URL=https://nexus.akraino.org
-SILO=tencent
-JENKINS_HOSTNAME=54.218.53.101
-JOB_NAME=TestCompileCode
-#BUILD_NUMBER=3
-#BUILD_URL="${JENKINS_HOSTNAME}/var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/log"
-#NEXUS_PATH="${SILO}/job/${JOB_NAME}/${BUILD_NUMBER}/log"
-#/usr/local/python3/bin/lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
-#echo "Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
-for BUILD_NUMBER in {4..28}
-do
-BUILD_URL="${JENKINS_HOSTNAME}/var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}/log"
-NEXUS_PATH="${SILO}/job/${JOB_NAME}/${BUILD_NUMBER}/log"
-/usr/local/python3/bin/lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
-echo "Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
-done
-```
