@@ -14,6 +14,9 @@ The CI logs are required to been uploaded to NEXUS repo. This article depicts th
 # Note Well
 Offical guidence:  https://wiki.akraino.org/display/AK/How+to%3A+Push+Logs+to+Nexus
 
+More details for lftools:
+https://docs.releng.linuxfoundation.org/projects/lftools/en/latest/commands/deploy.html#id1
+
 A NEXUS account is required to upload the logs. Apply the NEXUS account via the following link:
 https://jira.linuxfoundation.org/servicedesk/customer/portals
 
