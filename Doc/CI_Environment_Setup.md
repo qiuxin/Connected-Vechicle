@@ -205,3 +205,11 @@ y‐compass‐virtual‐ubuntu1604‐daily‐master"
 ```
 
 ### Setup Jenkins in Slave Node
+For Slave Mode, install Java will be ok.
+```
+sudo yum install -y java-1.8.0-openjdk-devel
+```
+
+
+
+### Connect Jenkins Slave from Jenkins Host
