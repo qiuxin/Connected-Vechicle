@@ -74,7 +74,7 @@ More info about Nginx install ,refer to https://blog.csdn.net/stefan1240/article
 
 # 3. <a id="main-chapter-3"></a> Install Python3.7
 Refer to the following link：
-https://www.cnblogs.com/songxingzhu/p/8568432.html
+https://segmentfault.com/a/1190000015628625
 
 
 # 4. <a id="main-chapter-4"></a> Install lftools
