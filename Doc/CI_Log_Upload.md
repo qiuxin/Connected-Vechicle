@@ -19,7 +19,8 @@ Offical guidence:  https://wiki.akraino.org/display/AK/How+to%3A+Push+Logs+to+Ne
 More details for lftools:
 https://docs.releng.linuxfoundation.org/projects/lftools/en/latest/commands/deploy.html#id1
 
-A NEXUS account is required to upload the logs. Apply the NEXUS account via the following link:
+To upload the code to Akraino NEXUS Repo, you need to apply a new LF ID with your blueprint name.
+Then send your new LF ID(the blueprint name) to the following link, they will creat a NEXUS repo for you.
 https://jira.linuxfoundation.org/servicedesk/customer/portals
 
 
