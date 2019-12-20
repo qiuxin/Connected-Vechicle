@@ -20,7 +20,7 @@ More details for lftools:
 https://docs.releng.linuxfoundation.org/projects/lftools/en/latest/commands/deploy.html#id1
 
 To upload the code to Akraino NEXUS Repo, you need to apply a new LF ID with your blueprint name.
-Then send your new LF ID(the blueprint name) to the following link, they will creat a NEXUS repo for you.
+Then send your new LF ID(the blueprint name) to the following link, they will creat a new NEXUS repo for you.
 https://jira.linuxfoundation.org/servicedesk/customer/portals
 
 
