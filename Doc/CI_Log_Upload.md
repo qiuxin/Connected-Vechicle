@@ -10,7 +10,8 @@ The CI logs are required to been uploaded to NEXUS repo. This article depicts th
 > * [6.Write Account Config Script](#main-chapter-6)
 > * [7.Run Jenkins as root](#main-chapter-7)
 > * [8.Jenkins Upload Log Script](#main-chapter-8)
-> * [8.Appendix](#main-chapter-8)
+> * [9.Run the script and upload log](#main-chapter-9)
+> * [10.The script running on the machine](#main-chapter-10)
 
 
 
@@ -183,23 +184,42 @@ Put the scripts in the jenkins jobs and triger the script to run.
 ![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Script_In_Jenkins.png)
 
 Check NEXUS repo, the log will be uploaded there.
+https://nexus.akraino.org/content/sites/logs/tencent/job/
 
 
+# 10. <a id="main-chapter-10"></a> The script running on the machine
 
-# 10. <a id="main-chapter-6"></a> Appendix
+If you want to run the upload script on your command line instead of Jenkins.
 
-## 10.1 <a id="main-chapter-7.1"></a> The script for CompileTarsCode job upload.
-Upload one job log, refer to:
-https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_Single_push_logs.sh
+The following script for your reference
+```
+# Deploying logs to LF Nexus log server ##
+# BUILD_NUMBER and JOB_NAME should be set by Jenkins
 
-Upload multiple job logs, refer to:
-https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_loop_push_logs.sh
+NEXUS_URL=https://nexus.akraino.org
+SILO=tencent
+JENKINS_HOSTNAME=35.165.250.56
+JOB_NAME=TestCompileCode
+FOLDER_NAME=connectedVehicle
+BUILD_NUMBER=3
 
+BUILD_URL="${JENKINS_HOSTNAME}/var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}"
+NEXUS_PATH="${SILO}/job/${FOLDER_NAME}/${JOB_NAME}/${BUILD_NUMBER}/"
 
-## 10.2 <a id="main-chapter-7.3"></a> The script for TestConnectVehicleService job upload 
-Upload one job log, refer to:
-https://github.com/qiuxin/Connected-Vechicle/blob/master/TestConnectVehicleService_Single_push_logs.sh
+cd /var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}
+rm -rf archives
+mkdir archives
+cp log console.log
+cp console.log archives
 
-Upload multiple job logs, refer to:
-https://github.com/qiuxin/Connected-Vechicle/blob/master/TestConnectVehicleService_loop_push_logs.sh
+cp log console-timestamp.log
+cp console-timestamp.log archives
 
+/usr/local/python3/bin/lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
+echo "Job $JOB_NAME Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
+
+/usr/local/python3/bin/lftools deploy archives -p '**/*.log' $NEXUS_URL $NEXUS_PATH /var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}
+echo "Job $JOB_NAME archives uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
+[centos@ip-172-31-4-217 robert]$
+
+```
