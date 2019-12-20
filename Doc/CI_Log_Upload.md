@@ -72,6 +72,7 @@ curl 34.216.198.49
 
 More info about Nginx install ,refer to https://blog.csdn.net/stefan1240/article/details/92764248
 
+
 # 3. <a id="main-chapter-3"></a> Install Python3.7
 Refer to the following link：
 https://segmentfault.com/a/1190000015628625
@@ -99,6 +100,22 @@ machine nexus.akraino.org
 login connectedVehicle
 password <password>  
 ```
+
+
+# 6. <a id="main-chapter-6"></a> Run Jenkins as root
+
+Open Jenkins config file
+```
+vim /etc/sysconfig/jenkins
+```
+
+Modify JENKINS_USER from "jenkins" to "root"
+```
+#JENKINS_USER="jenkins"
+JENKINS_USER="root"
+```
+
+
 
 
 # 6. <a id="main-chapter-6"></a> Run the script and upload log
