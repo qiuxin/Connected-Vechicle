@@ -207,9 +207,9 @@ Check NEXUS repo, the log will be uploaded there.
 https://nexus.akraino.org/content/sites/logs/tencent/job/
 
 
-# 9. <a id="main-chapter-9"></a> The script running on the machine
+# 9. <a id="main-chapter-9"></a> The script trigered by command line
 
-If you want to run the upload script on your command line instead of Jenkins.
+If you want to tigger the upload script via your command line instead of Jenkins.
 
 The following script for your reference
 ```
