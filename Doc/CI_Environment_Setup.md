@@ -132,8 +132,8 @@ Jenkis is ready:
 
 ## 3.3 <a id="main-chapter-3.3"></a> Clone Akraino CI Repo on Master 
 ```
-git clone "https://gerrit.akraino.org/r/ci-management"
-cd ci-management
+git clone "https://github.com/qiuxin/Tars.git"
+cd Tars
 git submodule update --init --recursive
 ```
 
@@ -172,6 +172,8 @@ To make CI system work, the following plugins are required. So install it one by
 - Github Pull Request Builder
 - Github Integration
 - Github Status Wrapper
+- MultiJobPlugin (Important if you want to let one jenkins job triger another jenkins job)
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/MultiJobPlugin.png)
 
 
 
