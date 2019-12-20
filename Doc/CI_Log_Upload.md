@@ -6,13 +6,11 @@ The CI logs are required to been uploaded to NEXUS repo. This article depicts th
 > * [2.Install Nginx](#main-chapter-2)
 > * [3.Install Python3.7](#main-chapter-3)
 > * [4.Install lftools](#main-chapter-4)
-> * [5.Write upload script](#main-chapter-5)
-> * [6.Write Account Config Script](#main-chapter-6)
-> * [7.Run Jenkins as root](#main-chapter-7)
-> * [8.Jenkins Upload Log Script](#main-chapter-8)
-> * [9.Run the script and upload log](#main-chapter-9)
-> * [10.The script running on the machine](#main-chapter-10)
-
+> * [5.Create Account Config Script](#main-chapter-5)
+> * [6.Run Jenkins as root](#main-chapter-6)
+> * [7.Jenkins Upload Log Script](#main-chapter-7)
+> * [8.Run the script and upload log](#main-chapter-8)
+> * [9.The script running on the machine](#main-chapter-9)
 
 
 # Note Well
@@ -113,12 +111,7 @@ https://segmentfault.com/a/1190000015628625
 # 4. <a id="main-chapter-4"></a> Install lftools
 /usr/bin/pip3.7 install lftools
 
-
-# 5. <a id="main-chapter-5"></a> Write upload script
-Find an abritbity path and create a file, the name and content of the file refer to the following link:
-https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_Single_push_logs.sh
-
-# 6. <a id="main-chapter-6"></a> Write Account Config Script
+# 5. <a id="main-chapter-5"></a> Create Account Config Script
 ```
 touch ~/.netrc
 vim ~/.netrc
@@ -132,8 +125,7 @@ login connectedVehicle
 password <password>  
 ```
 
-
-# 7. <a id="main-chapter-7"></a> Run Jenkins as root
+# 6. <a id="main-chapter-6"></a> Run Jenkins as root
 
 Open Jenkins config file.
 ```
@@ -168,7 +160,7 @@ root      5557  5247  0 01:48 pts/0    00:00:00 grep --color=auto jenkins
 ```
 
 
-# 8. <a id="main-chapter-8"></a> Jenkins Upload Log Script
+# 7. <a id="main-chapter-7"></a> Jenkins Upload Log Script
 To upload the log to NEXUS repo, a script is required to run in Jenkis Job. 
 
 A script I used is shown below for your reference. 
@@ -203,7 +195,7 @@ echo "Job $JOB_NAME archives uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PA
 ```
 
 
-# 9. <a id="main-chapter-9"></a> Run the script and upload log
+# 8. <a id="main-chapter-8"></a> Run the script and upload log
 Create a Jenkins freescale job in the Jenkins website. 
 ![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_FreeStyle%20_Job.png)
 
@@ -214,7 +206,7 @@ Check NEXUS repo, the log will be uploaded there.
 https://nexus.akraino.org/content/sites/logs/tencent/job/
 
 
-# 10. <a id="main-chapter-10"></a> The script running on the machine
+# 9. <a id="main-chapter-9"></a> The script running on the machine
 
 If you want to run the upload script on your command line instead of Jenkins.
 
