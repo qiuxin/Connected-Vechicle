@@ -8,8 +8,11 @@ The CI logs are required to been uploaded to NEXUS repo. This article depicts th
 > * [4.Install lftools](#main-chapter-4)
 > * [5.Write upload script](#main-chapter-5)
 > * [6.Write Account Config Script](#main-chapter-6)
-> * [7.Run the script and upload log](#main-chapter-7)
+> * [7.Run Jenkins as root](#main-chapter-7)
+> * [8.Jenkins Upload Log Script](#main-chapter-8)
 > * [8.Appendix](#main-chapter-8)
+
+
 
 # Note Well
 Offical guidence:  https://wiki.akraino.org/display/AK/How+to%3A+Push+Logs+to+Nexus
@@ -102,24 +105,86 @@ password <password>
 ```
 
 
-# 6. <a id="main-chapter-6"></a> Run Jenkins as root
+# 7. <a id="main-chapter-7"></a> Run Jenkins as root
 
-Open Jenkins config file
+Open Jenkins config file.
 ```
 vim /etc/sysconfig/jenkins
 ```
 
-Modify JENKINS_USER from "jenkins" to "root"
+Modify JENKINS_USER from "jenkins" to "root".
 ```
 #JENKINS_USER="jenkins"
 JENKINS_USER="root"
 ```
 
+Modify the folder access right.
+```
+chown -R root:root /var/lib/jenkins
+chown -R root:root /var/cache/jenkins
+chown -R root:root /var/log/jenkins
+```
+
+Double check whether the modification takes effects.
+```
+# reboot Jenkins
+service jenkins restart
+
+# check the usr to which Jenkins belong 
+ps -ef | grep jenkins
+
+# modification takes effects if the usr is "root" instead of "jenkins"
+[root@ip-172-31-4-217 sysconfig]# ps -ef | grep jenkins
+root      5332     1  9 01:29 ?        00:01:49 /etc/alternatives/java -Dcom.sun.akuma.Daemon=daemonized -Djava.awt.headless=true -DJENKINS_HOME=/var/lib/jenkins -jar /usr/lib/jenkins/jenkins.war --logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war --daemon --httpPort=8080 --debug=5 --handlerCountMax=100 --handlerCountMaxIdle=20
+root      5557  5247  0 01:48 pts/0    00:00:00 grep --color=auto jenkins
+```
 
 
+# 8. <a id="main-chapter-8"></a> Jenkins Upload Log Script
+To upload the log to NEXUS repo, a script is required to run in Jenkis Job. 
 
-# 6. <a id="main-chapter-6"></a> Run the script and upload log
-Run the script.
+A script I used is shown below for your reference. 
+```
+# Deploying logs to LF Nexus log server ##
+# BUILD_NUMBER and JOB_NAME should be set by Jenkins
+
+NEXUS_URL=https://nexus.akraino.org
+SILO=tencent
+JENKINS_HOSTNAME=35.165.250.56(This is the public IP address of the Jenkins host)
+JOB_NAME=TestCompileCode
+FOLDER_NAME=connectedVehicle
+BUILD_NUMBER=${BUILD_ID}
+
+BUILD_URL="${JENKINS_HOSTNAME}/var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}"
+NEXUS_PATH="${SILO}/job/${FOLDER_NAME}/${JOB_NAME}/${BUILD_NUMBER}/"
+
+cd /var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}
+rm -rf archives
+mkdir archives
+cp log console.log
+cp console.log archives
+
+cp log console-timestamp.log
+cp console-timestamp.log archives
+
+/usr/local/python3/bin/lftools deploy logs $NEXUS_URL $NEXUS_PATH $BUILD_URL
+echo "Job $JOB_NAME Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
+
+/usr/local/python3/bin/lftools deploy archives -p '**/*.log' $NEXUS_URL $NEXUS_PATH /var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}
+echo "Job $JOB_NAME archives uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
+```
+
+
+# 9. <a id="main-chapter-9"></a> Run the script and upload log
+Create a Jenkins freescale job in the Jenkins website. 
+
+
+Put the scripts in the jenkins jobs and triger the script to run.   
+
+
+Check NEXUS repo, the log will be uploaded there.
+
+
 
 # 7. <a id="main-chapter-6"></a> Appendix
 
