@@ -239,6 +239,4 @@ echo "Job $JOB_NAME Logs uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
 
 /usr/local/python3/bin/lftools deploy archives -p '**/*.log' $NEXUS_URL $NEXUS_PATH /var/lib/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}
 echo "Job $JOB_NAME archives uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PATH"
-[centos@ip-172-31-4-217 robert]$
-
 ```
