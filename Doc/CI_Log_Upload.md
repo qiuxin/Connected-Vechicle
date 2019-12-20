@@ -177,7 +177,7 @@ echo "Job $JOB_NAME archives uploaded to $NEXUS_URL/content/sites/logs/$NEXUS_PA
 
 # 9. <a id="main-chapter-9"></a> Run the script and upload log
 Create a Jenkins freescale job in the Jenkins website. 
-
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_FreeStyle%20_Job.png)
 
 Put the scripts in the jenkins jobs and triger the script to run.   
 
@@ -186,9 +186,9 @@ Check NEXUS repo, the log will be uploaded there.
 
 
 
-# 7. <a id="main-chapter-6"></a> Appendix
+# 10. <a id="main-chapter-6"></a> Appendix
 
-## 7.1 <a id="main-chapter-7.1"></a> The script for CompileTarsCode job upload.
+## 10.1 <a id="main-chapter-7.1"></a> The script for CompileTarsCode job upload.
 Upload one job log, refer to:
 https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_Single_push_logs.sh
 
@@ -196,7 +196,7 @@ Upload multiple job logs, refer to:
 https://github.com/qiuxin/Connected-Vechicle/blob/master/TestCompileCode_loop_push_logs.sh
 
 
-## 7.2 <a id="main-chapter-7.3"></a> The script for TestConnectVehicleService job upload 
+## 10.2 <a id="main-chapter-7.3"></a> The script for TestConnectVehicleService job upload 
 Upload one job log, refer to:
 https://github.com/qiuxin/Connected-Vechicle/blob/master/TestConnectVehicleService_Single_push_logs.sh
 
