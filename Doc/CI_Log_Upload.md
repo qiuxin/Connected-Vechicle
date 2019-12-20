@@ -82,18 +82,17 @@ More info about Nginx install ,refer to https://blog.csdn.net/stefan1240/article
 Install Lib
 ```
 yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel
-
 ```
 
 Install pip 
 ``` 
 yum -y install epel-release 
-yum install python-pip
+yum -y install python-pip
 ```
 
 Install wget
 ``` 
-yum install wget
+yum -y install wget
 ``` 
 
 Install Python
