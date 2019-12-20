@@ -103,7 +103,7 @@ tar -zxvf Python-3.7.0.tgz
 make && make install
 ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3.7 
 ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3.7
-//check wheather the installation successfully
+//check weather the installation successfully
 python -V
 ``` 
 
