@@ -180,7 +180,7 @@ Create a Jenkins freescale job in the Jenkins website.
 ![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Jenkins_FreeStyle%20_Job.png)
 
 Put the scripts in the jenkins jobs and triger the script to run.   
-
+![image](https://github.com/qiuxin/Connected-Vechicle/blob/master/picture/Script_In_Jenkins.png)
 
 Check NEXUS repo, the log will be uploaded there.
 
