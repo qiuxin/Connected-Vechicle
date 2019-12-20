@@ -78,13 +78,40 @@ More info about Nginx install ,refer to https://blog.csdn.net/stefan1240/article
 
 
 # 3. <a id="main-chapter-3"></a> Install Python3.7
-Refer to the following link：
-https://segmentfault.com/a/1190000015628625
 
+Install Lib
+```
+yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel
+
+```
+
+Install pip 
+``` 
+yum -y install epel-release 
+yum install python-pip
+```
+
+Install wget
+``` 
+yum install wget
+``` 
+
+Install Python
+``` 
+wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
+tar -zxvf Python-3.7.0.tgz
+./configure prefix=/usr/local/python3 
+make && make install
+ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3.7 
+ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3.7
+python -V
+``` 
+
+More information, pls refer to the following link：
+https://segmentfault.com/a/1190000015628625
 
 # 4. <a id="main-chapter-4"></a> Install lftools
 /usr/bin/pip3.7 install lftools
-
 
 
 # 5. <a id="main-chapter-5"></a> Write upload script
